@@ -52,7 +52,10 @@ class: text-left
 
 🍦 Cool Tips, Trends and Resources:
 
-- 🪝 [usehooks.com](https://usehooks.com/)
+- 🪝 https://motion.dev/
+- https://testing-library.com/
+- https://storybook.js.org/
+
 
 <br>
 <hr>
