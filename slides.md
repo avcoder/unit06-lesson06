@@ -38,13 +38,27 @@ transition: slide-left
 ---
 
 # Recap
-- Q: 
+- Let's look again at last week's exercise of [Putting it all together](https://unit06-lesson05.netlify.app/11)
+   - 👀 use of TS
+   - could have stored all info (name, username, avatar etc.), but for learning purposes only, just chose to store array of type Person:
+   ```ts
+    export type PersonType = { 
+      name: string;
+      isFollowing?: boolean 
+    }
+   ```
+
+---
+transition: slide-left
+---
+
+# useEffect
 
 ---
 layout: image-right
 transition: slide-left
-image: /assets/holmes.png
-backgroundSize: 420px 500px
+image: /assets/ninja.png
+backgroundSize: 420px 450px
 class: text-left
 ---
 
@@ -52,9 +66,10 @@ class: text-left
 
 🍦 Cool Tips, Trends and Resources:
 
-- 🪝 https://motion.dev/
-- https://testing-library.com/
-- https://storybook.js.org/
+- 🌊 [useEffect in 60 sec](https://x.com/thenetninjauk/status/1942882433742819389)
+- 🎠 https://motion.dev/
+- 🕵️ https://testing-library.com/
+- 📖 https://storybook.js.org/
 
 
 <br>
