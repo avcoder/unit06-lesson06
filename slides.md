@@ -87,26 +87,40 @@ transition: slide-left
 
 ---
 transition: slide-left
+layout: two-cols
 ---
 
-# Homework
 
-- Refactor the weather app we did for our first exercise (see https://codepen.io/codevilla/pen/YPyWWpm) into the following components.  Then separate the css into its respective components that you created.
-Feel free to create more components inside `<Forecast>` as you see fit.  FYI - ignore my `this.whatever` or `this.state.whatever` code below since I was using class-based React which you won't be using.
-  ```jsx
-  return (
-      <div>
-        <header>
-          <Nav city={this.state.currentCity} handleCityChange={this.changeCity} />
-        </header>
-        <main>
-          <TodayWeather
-            city={this.state.currentCity}
-            handleCoordsChange={this.changeCoords}
-          />
-          <Forecast lat={this.state.lat} lon={this.state.lon} />
-        </main>
-      </div>
-    );
-  ```
-- Start working on "Weather Forecasting App" assignment due Aug 17 midnight EST
+# Lab tomorrow
+Option: Choose a Getting Started Activity, OR ask questions AMA (ex: error handling review)
+
+Do at least 1 "Getting Started" from:
+  - [Next JS](https://nextjs.org/docs/app/getting-started/installation)
+  - [Astro](https://docs.astro.build/en/tutorial/0-introduction/)
+  - [React Server Components](https://react.dev/reference/rsc/server-components)
+  - [Electron](https://www.electronjs.org/docs/latest/tutorial/tutorial-first-app)
+  - [Tauri](https://v2.tauri.app/)
+  - [Storybook](https://storybook.js.org/)
+  - [Zod](https://zod.dev/)
+  - [Redux](https://redux.js.org/)
+  - [Zustand](https://zustand-demo.pmnd.rs/)
+  - [shadcdn UI](https://ui.shadcn.com/)
+
+
+::right::
+  - [Auth0](https://auth0.com/t)
+  - [RedwoodSDK](https://docs.rwsdk.com/)
+  - [Keystone JS](https://keystonejs.com/)
+  - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+  - [React PDF](https://react-pdf.org/)
+  - [Playwright](https://playwright.dev/)
+  - [GrowthBook](https://www.growthbook.io/)
+  - [Tanstack Query](https://tanstack.com/query/latest)
+  - [Remix](https://remix.run/)
+  - [Alpine JS](https://alpinejs.dev/)
+  - [HTMX](https://htmx.org/)
+  - [VuePress](https://vuepress.vuejs.org/)
+  - [Lodash](https://lodash.com/)
+  - [Bun](https://bun.com/)
+  - or any other tech from job postings / [Unit 4](https://unit04-lesson05.netlify.app/16)
+
