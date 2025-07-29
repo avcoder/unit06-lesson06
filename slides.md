@@ -123,7 +123,7 @@ Use to fetch JSON
 async function getData() {
   const res = await fetch(/* some API */);
   const data = await res.json();
-  setWhatever(data)
+  setWhateverState(data)
 }
 
 useEffect(() => {
