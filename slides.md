@@ -131,12 +131,16 @@ useEffect(() => {
 }, [])
 ```
 
+## Exercise
+
+- fetch JSON from www.themealdb.com/api/json/v1/1/categories.php and store it in a variable called `categories`
+
 
 ---
 transition: slide-left
 ---
 
-# useEffect (pg.4)
+# useEffect (pg.5)
 Use to keep track of window's width/height
 
 - in this case, if you `addEventListener` yourself, to prevent memory leaks, you must remember to clean up via `removeEventListener`
