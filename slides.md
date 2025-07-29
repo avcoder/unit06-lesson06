@@ -39,6 +39,7 @@ transition: slide-left
 
 # Recap
 
+- Q: When does a React component re-render?
 - fyi - RSC can be compatible with functional React, but only if backend is node
 - Let's look again at last week's exercise of [Putting it all together](https://unit06-lesson05.netlify.app/11)
    - 👀 use of TS
@@ -61,6 +62,8 @@ Use to sync things outside the UI ex: browser tab title
 - Side Effects: anytime we want to do something that's outside of React's responsibilities but we still want synchronized with our React component's state
 - `useEffect` is a hook where we pass a callback function; React calls it after each render
 
+## Exercise
+- hard code the browser's tab to show `Home page`
   ```jsx
   import { useEffect } from 'react'
 
@@ -89,7 +92,7 @@ Refactor our Counter button example such that the browser tab also shows the lat
     document.title = `${count}`;
   }, [count]);
   ```
-- Try removing the dependency `count` i.e. `}, []);`
+- Try removing the dependency `count` i.e. `}, []);` - do you get a console error?
 
 
 ---
