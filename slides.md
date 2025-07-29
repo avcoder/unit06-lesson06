@@ -113,8 +113,8 @@ function InfiniteLoopExample() {
   useEffect(() => {
     // This will run every time count changes
     console.log('Effect runs');
-    setCount(count + 1); // ⚠️ This triggers another render
-  }, [count]); // <--- Depends on count
+    setCount(count + 1); 
+  }, [count]); 
 
   return <div>Count: {count}</div>;
 }
