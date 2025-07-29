@@ -182,8 +182,8 @@ useEffect(() => {
 ---
 layout: image-right
 transition: slide-left
-image: /assets/ninja.png
-backgroundSize: 420px 450px
+image: /assets/dodds.png
+backgroundSize: 420px 400px
 class: text-left
 ---
 
