@@ -58,9 +58,10 @@ transition: slide-left
 # useEffect (pg.1)
 Use to sync things outside the UI ex: browser tab title
 
-- Q: So we know React is responible for producing UI on the page, but how would we change the browser tab title `document.title = 'Home page'` for example? (since the `<title>` tag falls outside of React's `<div id="root"></div>`)
+- Q: If React is responsible for producing UI, how would we change the browser tab title since the `<title>` tag falls outside of React's `<div id="root"></div>`
 - Side Effects: anytime we want to do something that's outside of React's responsibilities but we still want synchronized with our React component's state
 - `useEffect` is a hook where we pass a callback function; React calls it after each render
+- should pass at least an empty dependency array to ensure it'll only run after first render
 
 ## Exercise
 - hard code the browser's tab to show `Home page`
@@ -69,8 +70,9 @@ Use to sync things outside the UI ex: browser tab title
 
   useEffect(() => {
     document.title = `Home page`
-  });
+  }, []); // Note: the empty deps array ensures this code will run ONLY once on initial render
   ```
+
 
 
 ---
@@ -114,7 +116,7 @@ multiple useEffects
 transition: slide-left
 ---
 
-# useEffect (pg.3)
+# useEffect (pg.4)
 Use to fetch JSON
 
 
