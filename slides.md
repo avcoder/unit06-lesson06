@@ -141,6 +141,29 @@ transition: slide-left
 ---
 
 # useEffect (pg.5)
+Common error: you can trap yourself easily inside infinite loops
+
+```jsx
+import React, { useState, useEffect } from 'react';
+
+function InfiniteLoopExample() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    // This will run every time count changes
+    console.log('Effect runs');
+    setCount(count + 1); // ⚠️ This triggers another render
+  }, [count]); // <--- Depends on count
+
+  return <div>Count: {count}</div>;
+}
+```
+
+---
+transition: slide-left
+---
+
+# useEffect (pg.6)
 Use to keep track of window's width/height
 
 - in this case, if you `addEventListener` yourself, to prevent memory leaks, you must remember to clean up via `removeEventListener`
