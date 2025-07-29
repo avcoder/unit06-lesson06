@@ -55,10 +55,11 @@ transition: slide-left
 ---
 
 # useEffect (pg.1)
-Use to update browser tab title
+Use to sync things outside the UI ex: browser tab title
 
 - Q: So we know React is responible for producing UI on the page, but how would we change the browser tab title `document.title = 'Home page'` for example? (since the `<title>` tag falls outside of React's `<div id="root"></div>`)
 - Side Effects: anytime we want to do something that's outside of React's responsibilities but we still want synchronized with our React component's state
+- `useEffect` is a hook where we pass a callback function; React calls it after each render
 
   ```jsx
   import { useEffect } from 'react'
@@ -68,28 +69,51 @@ Use to update browser tab title
   });
   ```
 
----
-transition: slide-left
----
-
-# Exercise: useEffect to change document.title
-
-- Refactor our Counter button example such that the browser tab also shows the latest counter
-
 
 ---
 transition: slide-left
 ---
 
 # useEffect (pg.2)
-Use to fetch JSON
+use as a Watcher
+
+- `useEffect` always runs after the first time 
+- BUT `useEffect` allows us to watch particular variables so that when they change, it runs.  - The way we watch these declare variable *dependencies* is via an array
+- Do you remember Tommy's example of how the select dropdown only console logged only the previous state variable but not the current selected city?  How to `console.log` the actual updated state variable?
+
+## Exercise
+Refactor our Counter button example such that the browser tab also shows the latest count
+ 
+  ```jsx
+  useEffect(() => {
+    document.title = `${count}`;
+  }, [count]);
+  ```
+- Try removing the dependency `count` i.e. `}, []);`
+
+
+---
+transition: slide-left
+---
+
+# useEffect (pg.3) 
+multiple useEffects
+
+- Similar to how you can have multiple `useState` statements, you can multiple `useEffect` statements
+
+## Exercise
+- Create a basic signup form with name and email input boxes
+- Create basic `useState` variables for both fields
+- Use `useEffect` such that if name changes, `console.log` that change in name
+- Ensure that the name field is logged out only when the name field changes and not the email field (Tip: can use multiple `useEffect` calls)
 
 ---
 transition: slide-left
 ---
 
 # useEffect (pg.3)
-use as a Watcher
+Use to fetch JSON
+
 
 ---
 transition: slide-left
@@ -110,20 +134,6 @@ useEffect(() => {
   return () => window.removeEventListener('resize', handleResize);
 }, []);
 ```
-
-
----
-transition: slide-left
----
-
-# Exercise:
-
-- Create app that displays recipe categories
-- Upon clicking a category, app will display recipies related to that category
-- Upon clicking a recipe, app will display that recipe
-
-- see https://www.themealdb.com/api.php
-
 
 ---
 layout: image-right
@@ -166,6 +176,18 @@ transition: slide-left
 # Tanstack Query
 
 - see https://tanstack.com/query/latest
+
+---
+transition: slide-left
+---
+
+# Exercise:
+see https://www.themealdb.com/api.php
+
+- Create app that displays recipe categories
+- Upon clicking a category, app will display recipes related to that category
+- Upon clicking a recipe, app will display that recipe
+- Optional: use a UI library like Material UI, PrimeReact, or other.  Otherwise customize CSS via CSS modules.
 
 ---
 transition: slide-left
