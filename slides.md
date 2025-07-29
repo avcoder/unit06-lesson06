@@ -165,7 +165,7 @@ layout: two-cols
 
 
 # Lab tomorrow
-Option: Choose a Getting Started Activity, OR ask questions AMA (ex: error handling review)
+Option: Choose a Getting Started Activity 
 
 Do at least 1 "Getting Started" from:
   - [Next JS](https://nextjs.org/docs/app/getting-started/installation)
