@@ -38,6 +38,8 @@ transition: slide-left
 ---
 
 # Recap
+
+- fyi - RSC can be compatible with functional React, but only if backend is node
 - Let's look again at last week's exercise of [Putting it all together](https://unit06-lesson05.netlify.app/11)
    - 👀 use of TS
    - could have stored all info (name, username, avatar etc.), but for learning purposes only, just chose to store array of type Person:
@@ -55,6 +57,25 @@ transition: slide-left
 # useEffect (pg.1)
 Use to update browser tab title
 
+- Q: So we know React is responible for producing UI on the page, but how would we change the browser tab title `document.title = 'Home page'` for example? (since the `<title>` tag falls outside of React's `<div id="root"></div>`)
+- Side Effects: anytime we want to do something that's outside of React's responsibilities but we still want synchronized with our React component's state
+
+  ```jsx
+  import { useEffect } from 'react'
+
+  useEffect(() => {
+    document.title = `Home page`
+  });
+  ```
+
+---
+transition: slide-left
+---
+
+# Exercise: useEffect to change document.title
+
+- Refactor our Counter button example such that the browser tab also shows the latest counter
+
 
 ---
 transition: slide-left
@@ -69,6 +90,35 @@ transition: slide-left
 
 # useEffect (pg.3)
 use as a Watcher
+
+---
+transition: slide-left
+---
+
+# useEffect (pg.4)
+Use to keep track of window's width/height
+
+- in this case, if you `addEventListener` yourself, to prevent memory leaks, you must remember to clean up via `removeEventListener`
+
+```jsx
+useEffect(() => {
+  const handleResize = () => {
+    setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+  };
+
+  window.addEventListener('resize', handleResize);
+  return () => window.removeEventListener('resize', handleResize);
+}, []);
+```
+
+
+---
+transition: slide-left
+---
+
+# Exercise:
+
+
 
 
 ---
@@ -100,7 +150,13 @@ class: text-left
 transition: slide-left
 ---
 
-# O
+# Homework
+
+Use `useEffect` to:
+- start/show an interval timer (remember to clean up to clear the interval when React component unmounts)
+- show if browser is online/offline via checking `navigator.onLine` and `window.addEventListener('online')`
+- auto-save form data to localStorage every few seconds or on change
+- Start working on your React Weather App assignment
 
 ---
 transition: slide-left
