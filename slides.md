@@ -119,6 +119,18 @@ transition: slide-left
 # useEffect (pg.4)
 Use to fetch JSON
 
+```jsx
+useEffect(() => {
+  async function getData() {
+    fetch(/* some API */);
+  }
+
+  const res = await getData();
+  const data = res.json();
+  setWhatever(datas)
+})
+```
+
 
 ---
 transition: slide-left
