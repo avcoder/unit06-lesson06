@@ -156,7 +156,7 @@ useEffect(() => {
 
 ## Exercise
 
-- fetch JSON from www.themealdb.com/api/json/v1/1/categories.php and store it in a variable called `categories`
+- fetch JSON from [www.themealdb.com/api/json/v1/1/categories.php](https://www.themealdb.com/api/json/v1/1/categories.php) and store it in a variable called `categories`
 
 
 ---
