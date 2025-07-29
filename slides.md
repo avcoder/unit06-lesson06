@@ -94,7 +94,7 @@ Refactor our Counter button example such that the browser tab also shows the lat
     document.title = `${count}`;
   }, [count]);
   ```
-- Try removing the dependency `count` i.e. `}, []);` - do you get a console error?
+- Try removing the dependency `count` i.e. `}, []);` - do you get an error?
 
 
 ---
