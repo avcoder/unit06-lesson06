@@ -120,15 +120,15 @@ transition: slide-left
 Use to fetch JSON
 
 ```jsx
-useEffect(() => {
-  async function getData() {
-    fetch(/* some API */);
-  }
+async function getData() {
+  const res = await fetch(/* some API */);
+  const data = await res.json();
+  setWhatever(data)
+}
 
-  const res = await getData();
-  const data = res.json();
-  setWhatever(datas)
-})
+useEffect(() => {
+  getData()
+}, [])
 ```
 
 
