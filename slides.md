@@ -52,7 +52,24 @@ transition: slide-left
 transition: slide-left
 ---
 
-# useEffect
+# useEffect (pg.1)
+Use to update browser tab title
+
+
+---
+transition: slide-left
+---
+
+# useEffect (pg.2)
+Use to fetch JSON
+
+---
+transition: slide-left
+---
+
+# useEffect (pg.3)
+use as a Watcher
+
 
 ---
 layout: image-right
