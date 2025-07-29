@@ -146,6 +146,23 @@ class: text-left
 - 🧪 [Enter anonymous lab questions](https://docs.google.com/forms/d/e/1FAIpQLSevvGARdHQikso-uLqFCO481MABKE5HofuSrlzEPMNQ2ZLykw/viewform?usp=dialog)
 - ℹ️ [Course feedback survey](https://circuitstream.typeform.com/to/ZoyYk7px#course_id=SoftwareAN&instructor=9514)
 
+
+---
+transition: slide-left
+---
+
+# RTK Query
+
+- see https://redux-toolkit.js.org/rtk-query/overview
+
+---
+transition: slide-left
+---
+
+# Tanstack Query
+
+- see https://tanstack.com/query/latest
+
 ---
 transition: slide-left
 ---
