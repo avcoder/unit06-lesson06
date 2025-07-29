@@ -101,7 +101,30 @@ Refactor our Counter button example such that the browser tab also shows the lat
 transition: slide-left
 ---
 
-# useEffect (pg.3) 
+# useEffect (pg.3)
+Common error: you can trap yourself easily inside infinite loops
+
+```jsx
+import React, { useState, useEffect } from 'react';
+
+function InfiniteLoopExample() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    // This will run every time count changes
+    console.log('Effect runs');
+    setCount(count + 1); // ⚠️ This triggers another render
+  }, [count]); // <--- Depends on count
+
+  return <div>Count: {count}</div>;
+}
+```
+
+---
+transition: slide-left
+---
+
+# useEffect (pg.4) 
 multiple useEffects
 
 - Similar to how you can have multiple `useState` statements, you can multiple `useEffect` statements
@@ -116,7 +139,7 @@ multiple useEffects
 transition: slide-left
 ---
 
-# useEffect (pg.4)
+# useEffect (pg.5)
 Use to fetch JSON
 
 ```jsx
@@ -135,29 +158,6 @@ useEffect(() => {
 
 - fetch JSON from www.themealdb.com/api/json/v1/1/categories.php and store it in a variable called `categories`
 
-
----
-transition: slide-left
----
-
-# useEffect (pg.5)
-Common error: you can trap yourself easily inside infinite loops
-
-```jsx
-import React, { useState, useEffect } from 'react';
-
-function InfiniteLoopExample() {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    // This will run every time count changes
-    console.log('Effect runs');
-    setCount(count + 1); // ⚠️ This triggers another render
-  }, [count]); // <--- Depends on count
-
-  return <div>Count: {count}</div>;
-}
-```
 
 ---
 transition: slide-left
