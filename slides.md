@@ -118,7 +118,11 @@ transition: slide-left
 
 # Exercise:
 
+- Create app that displays recipe categories
+- Upon clicking a category, app will display recipies related to that category
+- Upon clicking a recipe, app will display that recipe
 
+- see https://www.themealdb.com/api.php
 
 
 ---
